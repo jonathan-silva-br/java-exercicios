@@ -5,7 +5,7 @@
  */
 package br.com.caelum.ed.vetores.testes;
 
-import br.com.caelum.ed.Aluno;
+import br.com.caelum.ed.Object;
 import br.com.caelum.ed.vetores.Vetor;
 
 /**
@@ -17,7 +17,7 @@ public class TesteLinearVSConstante {
         Vetor vetor = new Vetor();
         long inicio = System.currentTimeMillis();
         for (int i = 1; i < 100000; i++) {
-            Aluno aluno = new Aluno();
+            Object aluno = new Object();
             vetor.adiciona(aluno);
         }
         long fim = System.currentTimeMillis();

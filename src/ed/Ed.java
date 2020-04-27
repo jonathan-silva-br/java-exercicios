@@ -5,7 +5,7 @@
  */
 package ed;
 
-import br.com.caelum.ed.Aluno;
+import br.com.caelum.ed.Object;
 import br.com.caelum.ed.vetores.Vetor;
 import java.util.ArrayList;
 
@@ -26,7 +26,7 @@ public class Ed {
         System.out.println("Tamanho da Lista de Alunos usando classe Vetor: " + listaAlunos.tamanho());
                 
         for(int x = 0; x < 1000; x++){
-            Aluno aluno = new Aluno();
+            Object aluno = new Object();
             listaAlunos.adiciona(aluno);
         }
         
@@ -41,6 +41,9 @@ public class Ed {
         }
         
         System.out.println("Tamanho da Lista de Alunos usando ArrayList: " + listaDeAlunos.size()); 
+        
+        
+        
         
     }
     

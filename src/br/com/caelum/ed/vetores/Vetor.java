@@ -5,7 +5,7 @@
  */
 package br.com.caelum.ed.vetores;
 
-import br.com.caelum.ed.Aluno;
+import br.com.caelum.ed.Object;
 import java.util.Arrays;
 
 /**
@@ -14,17 +14,17 @@ import java.util.Arrays;
  */
 public class Vetor {
     
-    private Aluno[] objetos = new Aluno[100000];
+    private Object[] objetos = new Object[100000];
     
     private int totalDeObjetos = 0;
     
-    public void adiciona(Aluno objetos) {
+    public void adiciona(Object objetos) {
        this.garantaEspaco();
        this.objetos[this.totalDeObjetos] = objetos;
        this.totalDeObjetos++;
     }
     
-    public void adiciona(int posicao, Aluno objetos) {
+    public void adiciona(int posicao, Object objetos) {
         this.garantaEspaco();
         if (!this.posicaoValida(posicao)) {
             throw new IllegalArgumentException("Posição inválida");
@@ -36,7 +36,7 @@ public class Vetor {
         this.totalDeObjetos++;
     }
     
-    public Aluno pega(int posicao) {
+    public Object pega(int posicao) {
         if (!this.posicaoOcupada(posicao)) {
             throw new IllegalArgumentException("Posição inválida");
         }
@@ -53,7 +53,45 @@ public class Vetor {
         this.totalDeObjetos--;
     }
     
-    public boolean contem(Aluno objeto) {
+    public void remove(Object objeto){
+        for(int i = 0; i < this.totalDeObjetos; i++){           
+            if(objeto == this.objetos[i]){
+               for (int x = i; x < totalDeObjetos; x++) {
+                    this.objetos[x] = this.objetos[x+1];
+                }
+            }
+            break;
+        }       
+    }
+    
+    public void clear(){
+        for(int i = 0; i < this.totalDeObjetos - 1; i++){           
+            this.objetos[i] = null;
+        }
+    }
+    
+    public int indexOf(Object objeto) {        
+        int indexOf = 0;
+        for(int i = 0; i < this.totalDeObjetos; i++){           
+            if(objeto == this.objetos[i]){
+               indexOf = i;               
+            }           
+            break;
+        }
+        return indexOf;
+    }
+    
+    public int lastIndexOf(Object objeto){
+        int lastIndexOf = 0;
+        for(int i = 0; i < this.totalDeObjetos; i++){           
+            if(objeto == this.objetos[i]){
+               lastIndexOf = i;               
+            }        
+        }
+        return lastIndexOf;
+    }
+    
+    public boolean contem(Object objeto) {
         for(int i = 0; i < this.totalDeObjetos; i++){
             if(objeto == this.objetos[i]){
                 return true;
@@ -76,7 +114,7 @@ public class Vetor {
     
     private void garantaEspaco() {
         if (this.totalDeObjetos == this.objetos.length) {
-            Aluno[] novaArray = new Aluno[this.objetos.length * 2];
+            Object[] novaArray = new Object[this.objetos.length * 2];
             for (int i = 0; i < this.objetos.length; i++) {
                 novaArray[i] = this.objetos[i];
             }

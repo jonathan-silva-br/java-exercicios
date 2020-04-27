@@ -5,7 +5,7 @@
  */
 package br.com.caelum.ed.vetores.testes;
 
-import br.com.caelum.ed.Aluno;
+import br.com.caelum.ed.Object;
 import br.com.caelum.ed.vetores.Vetor;
 
 /**
@@ -14,8 +14,8 @@ import br.com.caelum.ed.vetores.Vetor;
  */
 public class TesteContemAluno {
     public static void main(String[] args) {
-        Aluno a1 = new Aluno();
-        Aluno a2 = new Aluno();
+        Object a1 = new Object();
+        Object a2 = new Object();
         
         a1.setNome("Rafael");
         a2.setNome("Paulo");
@@ -28,7 +28,7 @@ public class TesteContemAluno {
         System.out.println(lista.contem(a1));
         System.out.println(lista.contem(a2));
         
-        Aluno aluno = new Aluno();
+        Object aluno = new Object();
         aluno.setNome("Ana");
         
         System.out.println(lista.contem(aluno));    

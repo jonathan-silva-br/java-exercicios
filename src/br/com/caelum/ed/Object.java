@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author jonathan.silva
  */
-public class Aluno {
+public class Object {
     
     private String nome;
 
@@ -35,7 +35,7 @@ public class Aluno {
     }
 
     @Override
-    public boolean equals(Aluno obj) {
+    public boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
@@ -45,7 +45,7 @@ public class Aluno {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Aluno other = (Aluno) obj;
+        final Object other = (Object) obj;
         if (!Objects.equals(this.nome, other.nome)) {
             return false;
         }
