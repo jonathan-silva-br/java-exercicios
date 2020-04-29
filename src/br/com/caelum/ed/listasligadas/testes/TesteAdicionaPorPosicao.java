@@ -11,7 +11,7 @@ import br.com.caelum.ed.listasligadas.ListaLigada;
  *
  * @author jonathan.silva
  */
-public class TesteAdicionaPorPosica {
+public class TesteAdicionaPorPosicao {
     
     public static void main(String[] args) {
         

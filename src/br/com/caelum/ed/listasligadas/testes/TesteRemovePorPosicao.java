@@ -20,6 +20,8 @@ public class TesteRemovePorPosicao {
         lista.adiciona("Paulo");
         lista.adiciona("Camila");
         
+        System.out.println(lista);
+        
         lista.remove(1);
         
         System.out.println(lista);

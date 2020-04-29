@@ -19,11 +19,11 @@ public class TesteTamanho {
         lista.adiciona("Rafael");
         lista.adiciona("Paulo");
         
-        System.out.println(lista);
+        System.out.println(lista.tamanho());
         
         lista.adiciona("Camila");
         
-        System.out.println(lista);
+        System.out.println(lista.tamanho());
         
     }
     
