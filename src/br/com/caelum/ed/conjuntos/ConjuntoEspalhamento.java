@@ -30,6 +30,13 @@ public class ConjuntoEspalhamento {
         return palavra.toLowerCase().charAt(0) % 26;
     }
     
+    public boolean contem(String palavra){
+        int indice = this.calculaIndiceDaTabela(palavra);
+        List<String> lista = this.tabela.get(indice);
+        
+        return lista.contains(palavra);
+    }
+    
     public void adiciona(String palavra){
         if(!this.contem(palavra)){
             int indice = this.calculaIndiceDaTabela(palavra);
@@ -37,6 +44,16 @@ public class ConjuntoEspalhamento {
             lista.add(palavra);
             this.tamanho++;
         }
+    }
+    
+    public List<String> pegaTodas(){
+        List<String> palavras = new ArrayList<String>();
+        
+        for(int i = 0; i < this.tabela.size(); i++){
+            palavras.addAll(this.tabela.get(i));
+        }
+        
+        return palavras;
     }
     
 }
