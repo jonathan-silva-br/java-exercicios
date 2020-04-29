@@ -34,7 +34,7 @@ public class Object {
         return hash;
     }
 
-    @Override
+    
     public boolean equals(Object obj) {
         if (this == obj) {
             return true;
