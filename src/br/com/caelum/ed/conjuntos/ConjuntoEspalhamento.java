@@ -55,6 +55,10 @@ public class ConjuntoEspalhamento {
         }
     }
     
+    public int tamanho(){
+        return this.tamanho;
+    }
+    
     public List<String> pegaTodas(){
         List<String> palavras = new ArrayList<String>();
         
