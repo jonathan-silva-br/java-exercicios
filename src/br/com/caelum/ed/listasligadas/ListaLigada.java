@@ -52,5 +52,29 @@ public class ListaLigada {
     public void removeDoFim(){
         
     }
+
+    @Override
+    public String toString() {
+        
+        if(this.totalDeElementos == 0){
+            return "[]";
+        }
+        
+        StringBuilder builder = new StringBuilder("[");
+        Celula atual = primeira;
+        
+        for(int i = 0; i < this.totalDeElementos - 1; i++){
+            builder.append(atual.getElemento());
+            builder.append(", ");
+            atual = atual.getProxima();
+        }
+        
+        builder.append(atual.getElemento());
+        builder.append("]");
+        
+        return builder.toString();     
+        
+    }
+    
     
 }
