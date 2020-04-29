@@ -7,6 +7,7 @@ package br.com.caelum.ed.filas;
 
 import br.com.caelum.ed.Aluno;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  *
@@ -15,7 +16,7 @@ import java.util.LinkedList;
 public class Fila {
     
     
-    private LinkedList<Aluno> alunos = new LinkedList<Aluno>();
+    private List<Aluno> alunos = new LinkedList<Aluno>();
     
     public void insere(Aluno aluno){
         this.alunos.add(aluno);

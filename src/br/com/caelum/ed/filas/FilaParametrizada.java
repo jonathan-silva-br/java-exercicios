@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.caelum.ed.pilhas;
+package br.com.caelum.ed.filas;
 
-import br.com.caelum.ed.Peca;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -13,20 +12,19 @@ import java.util.List;
  *
  * @author jonathan.silva
  */
-public class Pilha {
+public class FilaParametrizada {
     
-    private List<Peca> pecas = new LinkedList<Peca>();
+    private List<T> objetos = new LinkedList<T>();
     
-    public void insere(Peca peca){
-        this.pecas.add(peca);
+    public void insere(T t){
+        this.objetos.add(t);
     }
     
-    public Peca remove(){
-        return this.pecas.remove(this.pecas.size() - 1);
+    public T remove(){
+        return this.objetos.remove(0);
     }
     
     public boolean vazia(){
-        return this.pecas.isEmpty();
+        return this.objetos.isEmpty();
     }
-    
 }

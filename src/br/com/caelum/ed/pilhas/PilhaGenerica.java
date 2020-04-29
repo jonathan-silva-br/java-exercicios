@@ -6,6 +6,7 @@
 package br.com.caelum.ed.pilhas;
 
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  *
@@ -13,7 +14,7 @@ import java.util.LinkedList;
  */
 public class PilhaGenerica {
     
-    private LinkedList<Object> objetos = new LinkedList<Object>();
+    private List<Object> objetos = new LinkedList<Object>();
     
     public void insere(Object objeto){
         this.objetos.add(objeto);
