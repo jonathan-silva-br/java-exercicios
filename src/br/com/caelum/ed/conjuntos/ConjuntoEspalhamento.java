@@ -46,6 +46,15 @@ public class ConjuntoEspalhamento {
         }
     }
     
+    public void remove(String palavra){
+        if(this.contem(palavra)){
+            int indice = this.calculaIndiceDaTabela(palavra);
+            List<String> lista = this.tabela.get(indice);
+            lista.remove(palavra);
+            this.tamanho--;
+        }
+    }
+    
     public List<String> pegaTodas(){
         List<String> palavras = new ArrayList<String>();
         
