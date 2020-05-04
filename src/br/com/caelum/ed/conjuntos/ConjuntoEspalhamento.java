@@ -40,6 +40,30 @@ public class ConjuntoEspalhamento {
         return codigo;
     }
     
+    private void redimensionaTabela(int novaCapacidade){
+        List<String> palavras = this.pegaTodas();
+        this.tabela.clear();
+        
+        for (int i = 0; i < novaCapacidade; i++){
+            this.tabela.add(new LinkedList<String>());
+        }
+        
+        for (String palavra : palavras){
+            this.adiciona(palavra);
+        }
+    }
+    
+    private void verificaCarga(){
+        int capacidade = this.tabela.size();
+        double carga = (double) this.tamanho / capacidade;
+        
+        if (carga > 0.75){
+            this.redimensionaTabela(capacidade * 2);
+        }else if(carga < 0.25){
+            this.redimensionaTabela(Math.max(capacidade / 2, 10));
+        }
+    }
+    
     public boolean contem(String palavra){
         int indice = this.calculaIndiceDaTabela(palavra);
         List<String> lista = this.tabela.get(indice);
@@ -49,6 +73,7 @@ public class ConjuntoEspalhamento {
     
     public void adiciona(String palavra){
         if(!this.contem(palavra)){
+            this.verificaCarga();
             int indice = this.calculaIndiceDaTabela(palavra);
             List<String> lista = this.tabela.get(indice);
             lista.add(palavra);
@@ -58,6 +83,7 @@ public class ConjuntoEspalhamento {
     
     public void remove(String palavra){
         if(this.contem(palavra)){
+            this.verificaCarga();
             int indice = this.calculaIndiceDaTabela(palavra);
             List<String> lista = this.tabela.get(indice);
             lista.remove(palavra);
