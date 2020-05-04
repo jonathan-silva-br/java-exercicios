@@ -21,11 +21,11 @@ public class Associacao {
         this.carro = carro;
     }
     
-    public String getPlaca(){
+    public Object getPlaca(){
         return placa;
     }
     
-    public Carro getCarro(){
+    public Object getCarro(){
         return carro;
     }
     

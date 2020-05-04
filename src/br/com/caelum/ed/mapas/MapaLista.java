@@ -27,7 +27,7 @@ public class MapaLista {
     public Carro pega(String placa){
         for (Associacao associacao : this.associacoes){
             if (placa.equals(associacao.getPlaca())){
-                return associacao.getCarro();
+                return (Carro) associacao.getCarro();
             }
         }
         throw new IllegalArgumentException("Chave não existe");
