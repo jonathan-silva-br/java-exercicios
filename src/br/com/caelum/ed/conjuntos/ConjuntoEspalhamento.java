@@ -27,7 +27,17 @@ public class ConjuntoEspalhamento {
     }
     
     private int calculaIndiceDaTabela(String palavra){
-        return palavra.toLowerCase().charAt(0) % 26;
+        int codigoDeEspalhamento = this.calculaCodigoDeEspalhamento(palavra);
+        codigoDeEspalhamento = Math.abs(codigoDeEspalhamento);
+        return codigoDeEspalhamento % tabela.size();
+    }
+    
+    private int calculaCodigoDeEspalhamento(String palavra){
+        int codigo = 1;
+        for (int i = 0; i < palavra.length(); i++){
+            codigo = 31 * codigo + palavra.charAt(i);
+        }
+        return codigo;
     }
     
     public boolean contem(String palavra){
@@ -57,6 +67,16 @@ public class ConjuntoEspalhamento {
     
     public int tamanho(){
         return this.tamanho;
+    }
+    
+    public void imprimeTabela(){
+        for (List<String> lista : this.tabela){
+            System.out.print("[");
+            for (int i = 0; i < lista.size(); i++){
+                System.out.print("*");
+            }
+            System.out.println("]");
+        }
     }
     
     public List<String> pegaTodas(){
