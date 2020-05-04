@@ -19,11 +19,11 @@ public class TesteRemove {
         conjunto.adiciona("Ana");
         conjunto.adiciona("Paulo");
         
-        List<String> palavras = conjunto.pegaTodas();
+        List<Object> palavras = conjunto.pegaTodas();
         
         System.out.println("antes de remover");
         
-        for(String palavra: palavras){
+        for(Object palavra: palavras){
             System.out.println(palavra);
         }
         
@@ -33,7 +33,7 @@ public class TesteRemove {
         
         System.out.println("Depois de remover");
         
-        for(String palavra : palavras){
+        for(Object palavra : palavras){
             System.out.println(palavra);
         }
         
