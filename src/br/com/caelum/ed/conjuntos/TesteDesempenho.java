@@ -14,7 +14,7 @@ public class TesteDesempenho {
         
         long inicio = System.currentTimeMillis();
         
-        ConjuntoEspalhamento conjunto = new ConjuntoEspalhamento();
+        ConjuntoEspalhamentoGenerico conjunto = new ConjuntoEspalhamentoGenerico();
         
         for (int i = 0; i < 50000; i++){
             conjunto.adiciona("palavra" + i);

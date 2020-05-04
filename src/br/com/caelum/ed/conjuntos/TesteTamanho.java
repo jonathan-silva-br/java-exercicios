@@ -12,7 +12,7 @@ package br.com.caelum.ed.conjuntos;
 public class TesteTamanho {
     public static void main(String[] args) {
         
-        ConjuntoEspalhamento tabelas = new ConjuntoEspalhamento();
+        ConjuntoEspalhamentoGenerico tabelas = new ConjuntoEspalhamentoGenerico();
         
         tabelas.adiciona("Bruna");
         tabelas.adiciona("Jonathan");

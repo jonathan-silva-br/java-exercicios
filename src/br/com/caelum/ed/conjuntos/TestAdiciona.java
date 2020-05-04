@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class TestAdiciona {
     public static void main(String[] args){
-        ConjuntoEspalhamento conjunto = new ConjuntoEspalhamento();
+        ConjuntoEspalhamentoGenerico conjunto = new ConjuntoEspalhamentoGenerico();
         conjunto.adiciona("Rafael");
         conjunto.adiciona("Ana");
         conjunto.adiciona("Paulo");
