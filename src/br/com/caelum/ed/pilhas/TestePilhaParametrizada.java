@@ -18,7 +18,7 @@ public class TestePilhaParametrizada {
         Peca peca = new Peca();
         pilhaDePecas.insere(peca);
         
-        Peca pecaRemovida = pilhasDePecas.remove();
+        Peca pecaRemovida = pilhaDePecas.remove();
         
         if(peca != pecaRemovida){
             System.out.println("Erro: a peça removida não é igual a que foi inserida");

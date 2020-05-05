@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author jonathan.silva
  */
-public class PilhaParametrizada {
+public class PilhaParametrizada<T> {
     
     private List<T> objetos = new LinkedList<T>();
     
