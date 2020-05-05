@@ -29,6 +29,10 @@ public class TesteFilaGenerica {
             System.out.println("Erro: a fila não está vazia");
         }
         
+        FilaParametrizada<Aluno> filaParametrizada = new FilaParametrizada<Aluno>();
+        filaParametrizada.insere(new Aluno());
+        System.out.println(filaParametrizada);
+        
         
     }    
 }

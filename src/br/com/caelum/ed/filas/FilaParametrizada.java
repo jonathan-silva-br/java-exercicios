@@ -12,12 +12,12 @@ import java.util.List;
  *
  * @author jonathan.silva
  */
-public class FilaParametrizada {
+public class FilaParametrizada<T> {
     
-    private List<T> objetos = new LinkedList<T>();
-    
-    public void insere(T t){
-        this.objetos.add(t);
+    private List<T> objetos = new LinkedList<T>();    
+        
+    public void insere(T objeto){
+        this.objetos.add(objeto);
     }
     
     public T remove(){
